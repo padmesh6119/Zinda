@@ -1,0 +1,154 @@
+{
+  "protocol": {
+    "seed": 20261013,
+    "split": "80/20 by person identity (TCPD pid; NCVoters NCID), before model fitting",
+    "metrics_note": "Precision, recall, F1 and average precision apply only to the constructed candidate-pair sets. TCPD negatives are sampled hard negatives; NCVoters includes its provided non-duplicate pairs. Neither estimates real pension-population error rates.",
+    "review_budget_note": "Top 5% of each test candidate-pair list; this is a comparison within that dataset's constructed pool, not real field-team capacity.",
+    "tcpd_pair_cap": 10000,
+    "features": [
+      "name_exact",
+      "name_ratio",
+      "name_token_sort",
+      "name_token_set",
+      "name_jaro_winkler",
+      "token_jaccard",
+      "shared_token_count",
+      "initial_coverage",
+      "initial_conflict",
+      "name_length_ratio",
+      "length_difference",
+      "age_difference",
+      "age_present",
+      "age_year_consistency",
+      "sex_agree",
+      "sex_present",
+      "region_agree",
+      "region_present"
+    ],
+    "limits": [
+      "TCPD labels are human-reviewed candidate identity clusters and contain possible errors.",
+      "TCPD candidates are not representative of pension beneficiaries.",
+      "NCVoters is U.S. voter data and is subject to non-commercial-use terms.",
+      "No demographic, geographic, or language subgroup claims are made in this first run."
+    ]
+  },
+  "results": [
+    {
+      "dataset": "TCPD (Indian election candidates)",
+      "train_pairs": 25000,
+      "test_pairs": 25000,
+      "train_positive_rate": 0.4,
+      "test_positive_rate": 0.4,
+      "baselines": {
+        "exact_normalized_name": {
+          "threshold": 0.5,
+          "precision": 0.9784989858012171,
+          "recall": 0.4824,
+          "f1": 0.6462156731413261,
+          "average_precision": 0.6790679107505071,
+          "roc_auc": 0.7376666666666667,
+          "brier_score": 0.21128,
+          "review_budget_fraction": 0.05,
+          "precision_at_review_budget": 0.9816,
+          "recall_at_review_budget": 0.1227,
+          "predicted_positive_count": 4930
+        },
+        "fuzzy_ratio_ge_0.90": {
+          "threshold": 0.9,
+          "precision": 0.9508262260127932,
+          "recall": 0.7135,
+          "f1": 0.8152422303473491,
+          "average_precision": 0.9288625855433075,
+          "roc_auc": 0.9436321466666666,
+          "brier_score": 0.20762125655203675,
+          "review_budget_fraction": 0.05,
+          "precision_at_review_budget": 0.9784,
+          "recall_at_review_budget": 0.1223,
+          "predicted_positive_count": 7504
+        }
+      },
+      "logistic_regression": {
+        "threshold": 0.4223972832366308,
+        "precision": 0.9274435338796722,
+        "recall": 0.928,
+        "f1": 0.9277216834949514,
+        "average_precision": 0.9690527491015382,
+        "roc_auc": 0.9800193233333334,
+        "brier_score": 0.046779348624990016,
+        "review_budget_fraction": 0.05,
+        "precision_at_review_budget": 0.984,
+        "recall_at_review_budget": 0.123,
+        "predicted_positive_count": 10006
+      },
+      "records": 136526,
+      "entities": 110709,
+      "train_entities": 88567,
+      "test_entities": 22142,
+      "train_positive_pairs": 10000,
+      "train_hard_negative_pairs": 15000,
+      "test_positive_pairs": 10000,
+      "test_hard_negative_pairs": 15000,
+      "hard_negative_definition": "Different TCPD pid, same normalized state, at least one shared name token of length >=3; at most 1,000 sampled candidates per state-token block; negatives sampled up to 1.5 per positive. Positive pairs are capped at 10,000 per split by uniform sampling when needed."
+    },
+    {
+      "dataset": "NCVoters (North Carolina voter records)",
+      "train_pairs": 71424,
+      "test_pairs": 5672,
+      "train_positive_rate": 0.11011704749103943,
+      "test_positive_rate": 0.34449929478138225,
+      "baselines": {
+        "exact_normalized_name": {
+          "threshold": 0.5,
+          "precision": 1.0,
+          "recall": 0.7123848515864892,
+          "f1": 0.8320382546323969,
+          "average_precision": 0.8114680673833863,
+          "roc_auc": 0.8561924257932446,
+          "brier_score": 0.09908321579689704,
+          "review_budget_fraction": 0.05,
+          "precision_at_review_budget": 1.0,
+          "recall_at_review_budget": 0.14534288638689866,
+          "predicted_positive_count": 1392
+        },
+        "fuzzy_ratio_ge_0.90": {
+          "threshold": 0.9,
+          "precision": 1.0,
+          "recall": 0.7727737973387923,
+          "f1": 0.871824480369515,
+          "average_precision": 0.9988975107278854,
+          "roc_auc": 0.9994077059071941,
+          "brier_score": 0.08708647708605421,
+          "review_budget_fraction": 0.05,
+          "precision_at_review_budget": 1.0,
+          "recall_at_review_budget": 0.14534288638689866,
+          "predicted_positive_count": 1510
+        }
+      },
+      "logistic_regression": {
+        "threshold": 0.48159339623988656,
+        "precision": 0.9974306269270298,
+        "recall": 0.9933469805527124,
+        "f1": 0.9953846153846154,
+        "average_precision": 0.9999373774331561,
+        "roc_auc": 0.999966827126106,
+        "brier_score": 0.0024407625082438645,
+        "review_budget_fraction": 0.05,
+        "precision_at_review_budget": 1.0,
+        "recall_at_review_budget": 0.14534288638689866,
+        "predicted_positive_count": 1946
+      },
+      "records": 14183,
+      "entities": 6692,
+      "train_entities": 5353,
+      "test_entities": 1339,
+      "source_duplicate_entries": 9819,
+      "source_nonduplicate_entries": 98142,
+      "train_positive_pairs": 7865,
+      "train_negative_pairs": 63559,
+      "test_positive_pairs": 1954,
+      "test_negative_pairs": 3718,
+      "positive_label_agreement_with_ncid": 1.0,
+      "negative_label_agreement_with_ncid": 1.0
+    }
+  ]
+}

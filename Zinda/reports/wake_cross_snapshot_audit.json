@@ -1,0 +1,96 @@
+{
+  "older_source": "HPI prepared NCVoters sample, Nov 6 2018 snapshot",
+  "newer_source": "NCSBE Wake County current voter file, file last modified Oct 12 2026",
+  "older_wake_rows": 1728,
+  "older_distinct_ncid_count": 1402,
+  "newer_wake_row_count": 1007349,
+  "older_sample_ncid_present_in_newer_wake": 510,
+  "older_sample_ncid_not_found_in_newer_wake": 892,
+  "matched_status_reason_counts": [
+    {
+      "status_cd": "A",
+      "status_desc": "ACTIVE",
+      "reason_cd": "A2",
+      "reason_desc": "CONFIRMATION PENDING",
+      "count": 4
+    },
+    {
+      "status_cd": "A",
+      "status_desc": "ACTIVE",
+      "reason_cd": "AP",
+      "reason_desc": "VERIFICATION PENDING",
+      "count": 1
+    },
+    {
+      "status_cd": "A",
+      "status_desc": "ACTIVE",
+      "reason_cd": "AV",
+      "reason_desc": "VERIFIED",
+      "count": 405
+    },
+    {
+      "status_cd": "I",
+      "status_desc": "INACTIVE",
+      "reason_cd": "IN",
+      "reason_desc": "CONFIRMATION NOT RETURNED",
+      "count": 20
+    },
+    {
+      "status_cd": "I",
+      "status_desc": "INACTIVE",
+      "reason_cd": "IU",
+      "reason_desc": "CONFIRMATION RETURNED UNDELIVERABLE",
+      "count": 6
+    },
+    {
+      "status_cd": "R",
+      "status_desc": "REMOVED",
+      "reason_cd": "RD",
+      "reason_desc": "DECEASED",
+      "count": 18
+    },
+    {
+      "status_cd": "R",
+      "status_desc": "REMOVED",
+      "reason_cd": "RF",
+      "reason_desc": "FELONY CONVICTION",
+      "count": 1
+    },
+    {
+      "status_cd": "R",
+      "status_desc": "REMOVED",
+      "reason_cd": "RH",
+      "reason_desc": "MOVED WITHIN STATE",
+      "count": 2
+    },
+    {
+      "status_cd": "R",
+      "status_desc": "REMOVED",
+      "reason_cd": "RL",
+      "reason_desc": "MOVED FROM COUNTY",
+      "count": 13
+    },
+    {
+      "status_cd": "R",
+      "status_desc": "REMOVED",
+      "reason_cd": "RM",
+      "reason_desc": "REMOVED AFTER 2 FED GENERAL ELECTIONS IN INACTIVE STATUS",
+      "count": 31
+    },
+    {
+      "status_cd": "R",
+      "status_desc": "REMOVED",
+      "reason_cd": "RQ",
+      "reason_desc": "REQUEST FROM VOTER",
+      "count": 1
+    },
+    {
+      "status_cd": "R",
+      "status_desc": "REMOVED",
+      "reason_cd": "RS",
+      "reason_desc": "MOVED FROM STATE",
+      "count": 8
+    }
+  ],
+  "interpretation": "This is only a sample-continuity audit. An older NCID absent from the current Wake file may have moved counties, been removed, or otherwise changed; absence here is not evidence of wrongful deletion. Status/reason codes are administrative labels, not independently verified error labels."
+}

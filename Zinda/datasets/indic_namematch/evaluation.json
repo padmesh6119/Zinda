@@ -1,0 +1,263 @@
+{
+  "dataset": "indic-namematch hand-authored synthetic challenge pairs",
+  "pair_count": 120,
+  "matches": 60,
+  "non_matches": 60,
+  "unresolvable_pairs": 18,
+  "threshold_note": "Fixed 0.90 for precision/recall/F1; AP and ROC AUC summarize ranking. This is descriptive challenge-set evaluation, not a population estimate.",
+  "results": {
+    "fuzzy_ratio": {
+      "threshold": 0.9,
+      "precision": 0.5517241379310345,
+      "recall": 0.26666666666666666,
+      "f1": 0.35955056179775285,
+      "false_positive_rate": 0.21666666666666667,
+      "average_precision": 0.5576395119482711,
+      "roc_auc": 0.5634722222222223,
+      "tp": 16,
+      "fp": 13,
+      "fn": 44,
+      "tn": 47
+    },
+    "exact": {
+      "threshold": 0.9,
+      "precision": 0.9444444444444444,
+      "recall": 0.2833333333333333,
+      "f1": 0.4358974358974359,
+      "false_positive_rate": 0.016666666666666666,
+      "average_precision": 0.625925925925926,
+      "roc_auc": 0.6333333333333333,
+      "tp": 17,
+      "fp": 1,
+      "fn": 43,
+      "tn": 59
+    },
+    "levenshtein": {
+      "threshold": 0.9,
+      "precision": 0.6944444444444444,
+      "recall": 0.4166666666666667,
+      "f1": 0.5208333333333334,
+      "false_positive_rate": 0.18333333333333332,
+      "average_precision": 0.6951902780736607,
+      "roc_auc": 0.6384722222222223,
+      "tp": 25,
+      "fp": 11,
+      "fn": 35,
+      "tn": 49
+    },
+    "jaro_winkler": {
+      "threshold": 0.9,
+      "precision": 0.6071428571428571,
+      "recall": 0.5666666666666667,
+      "f1": 0.5862068965517241,
+      "false_positive_rate": 0.36666666666666664,
+      "average_precision": 0.7135035042099163,
+      "roc_auc": 0.6701388888888888,
+      "tp": 34,
+      "fp": 22,
+      "fn": 26,
+      "tn": 38
+    },
+    "token_set": {
+      "threshold": 0.9,
+      "precision": 0.8292682926829268,
+      "recall": 0.5666666666666667,
+      "f1": 0.6732673267326732,
+      "false_positive_rate": 0.11666666666666667,
+      "average_precision": 0.764559367845004,
+      "roc_auc": 0.727777777777778,
+      "tp": 34,
+      "fp": 7,
+      "fn": 26,
+      "tn": 53
+    },
+    "phonetic": {
+      "threshold": 0.9,
+      "precision": 0.8163265306122449,
+      "recall": 0.6666666666666666,
+      "f1": 0.7339449541284403,
+      "false_positive_rate": 0.15,
+      "average_precision": 0.800893559583702,
+      "roc_auc": 0.7829166666666667,
+      "tp": 40,
+      "fp": 9,
+      "fn": 20,
+      "tn": 51
+    },
+    "hybrid": {
+      "threshold": 0.9,
+      "precision": 0.7758620689655172,
+      "recall": 0.75,
+      "f1": 0.7627118644067795,
+      "false_positive_rate": 0.21666666666666667,
+      "average_precision": 0.8363000354638468,
+      "roc_auc": 0.83375,
+      "tp": 45,
+      "fp": 13,
+      "fn": 15,
+      "tn": 47
+    },
+    "rarity_weighted": {
+      "threshold": 0.9,
+      "precision": 0.9047619047619048,
+      "recall": 0.6333333333333333,
+      "f1": 0.7450980392156863,
+      "false_positive_rate": 0.06666666666666667,
+      "average_precision": 0.8455716455409259,
+      "roc_auc": 0.8470833333333333,
+      "tp": 38,
+      "fp": 4,
+      "fn": 22,
+      "tn": 56
+    }
+  },
+  "category_aggregates": {
+    "common_name_collision": {
+      "pairs": 5,
+      "matches": 0,
+      "non_matches": 5,
+      "fuzzy_ratio_correct_at_0_90": 4,
+      "rarity_weighted_correct_at_0_90": 4
+    },
+    "control_negative": {
+      "pairs": 10,
+      "matches": 0,
+      "non_matches": 10,
+      "fuzzy_ratio_correct_at_0_90": 10,
+      "rarity_weighted_correct_at_0_90": 10
+    },
+    "control_positive": {
+      "pairs": 10,
+      "matches": 10,
+      "non_matches": 0,
+      "fuzzy_ratio_correct_at_0_90": 6,
+      "rarity_weighted_correct_at_0_90": 10
+    },
+    "gender_variant": {
+      "pairs": 4,
+      "matches": 0,
+      "non_matches": 4,
+      "fuzzy_ratio_correct_at_0_90": 2,
+      "rarity_weighted_correct_at_0_90": 4
+    },
+    "honorific_masking": {
+      "pairs": 4,
+      "matches": 0,
+      "non_matches": 4,
+      "fuzzy_ratio_correct_at_0_90": 2,
+      "rarity_weighted_correct_at_0_90": 3
+    },
+    "honorific_suffix": {
+      "pairs": 5,
+      "matches": 5,
+      "non_matches": 0,
+      "fuzzy_ratio_correct_at_0_90": 1,
+      "rarity_weighted_correct_at_0_90": 5
+    },
+    "initial_collision": {
+      "pairs": 5,
+      "matches": 0,
+      "non_matches": 5,
+      "fuzzy_ratio_correct_at_0_90": 5,
+      "rarity_weighted_correct_at_0_90": 5
+    },
+    "initials_expanded": {
+      "pairs": 7,
+      "matches": 7,
+      "non_matches": 0,
+      "fuzzy_ratio_correct_at_0_90": 0,
+      "rarity_weighted_correct_at_0_90": 1
+    },
+    "married_name_change": {
+      "pairs": 4,
+      "matches": 4,
+      "non_matches": 0,
+      "fuzzy_ratio_correct_at_0_90": 0,
+      "rarity_weighted_correct_at_0_90": 0
+    },
+    "middle_name_dropped": {
+      "pairs": 6,
+      "matches": 6,
+      "non_matches": 0,
+      "fuzzy_ratio_correct_at_0_90": 0,
+      "rarity_weighted_correct_at_0_90": 3
+    },
+    "ocr_noise": {
+      "pairs": 5,
+      "matches": 5,
+      "non_matches": 0,
+      "fuzzy_ratio_correct_at_0_90": 4,
+      "rarity_weighted_correct_at_0_90": 1
+    },
+    "one_edit_apart": {
+      "pairs": 8,
+      "matches": 0,
+      "non_matches": 8,
+      "fuzzy_ratio_correct_at_0_90": 4,
+      "rarity_weighted_correct_at_0_90": 7
+    },
+    "patronymic_convention": {
+      "pairs": 5,
+      "matches": 5,
+      "non_matches": 0,
+      "fuzzy_ratio_correct_at_0_90": 0,
+      "rarity_weighted_correct_at_0_90": 2
+    },
+    "shared_common_surname": {
+      "pairs": 5,
+      "matches": 0,
+      "non_matches": 5,
+      "fuzzy_ratio_correct_at_0_90": 5,
+      "rarity_weighted_correct_at_0_90": 5
+    },
+    "sibling": {
+      "pairs": 8,
+      "matches": 0,
+      "non_matches": 8,
+      "fuzzy_ratio_correct_at_0_90": 4,
+      "rarity_weighted_correct_at_0_90": 8
+    },
+    "spacing_punctuation": {
+      "pairs": 4,
+      "matches": 4,
+      "non_matches": 0,
+      "fuzzy_ratio_correct_at_0_90": 3,
+      "rarity_weighted_correct_at_0_90": 4
+    },
+    "spouse_shared_surname": {
+      "pairs": 4,
+      "matches": 0,
+      "non_matches": 4,
+      "fuzzy_ratio_correct_at_0_90": 4,
+      "rarity_weighted_correct_at_0_90": 4
+    },
+    "subset_token": {
+      "pairs": 3,
+      "matches": 0,
+      "non_matches": 3,
+      "fuzzy_ratio_correct_at_0_90": 3,
+      "rarity_weighted_correct_at_0_90": 3
+    },
+    "token_reorder": {
+      "pairs": 6,
+      "matches": 6,
+      "non_matches": 0,
+      "fuzzy_ratio_correct_at_0_90": 0,
+      "rarity_weighted_correct_at_0_90": 6
+    },
+    "transliteration": {
+      "pairs": 8,
+      "matches": 8,
+      "non_matches": 0,
+      "fuzzy_ratio_correct_at_0_90": 2,
+      "rarity_weighted_correct_at_0_90": 6
+    },
+    "transposed_different": {
+      "pairs": 4,
+      "matches": 0,
+      "non_matches": 4,
+      "fuzzy_ratio_correct_at_0_90": 4,
+      "rarity_weighted_correct_at_0_90": 3
+    }
+  }
+}

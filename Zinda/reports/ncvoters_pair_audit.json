@@ -1,0 +1,65 @@
+{
+  "identity_split": "80/20 by NCID, seed 20261013; identity sets are disjoint by construction",
+  "train_entities": 5353,
+  "test_entities": 1339,
+  "identity_intersection": 0,
+  "pair_difficulty": [
+    {
+      "label": "all provided duplicate pairs",
+      "pairs": 9819,
+      "missing_endpoints": 0,
+      "train_identity_pairs": 7865,
+      "test_identity_pairs": 1954,
+      "cross_split_or_mixed_identity_pairs": 0,
+      "exact_normalized_name_fraction": 0.7142275180771973,
+      "name_ratio_ge_0_90_fraction": 0.7651492005295855,
+      "token_sort_ge_0_90_fraction": 0.7605662491088706,
+      "same_region_fraction": 0.9998981566350952,
+      "shared_token_fraction": 0.9994907831754761,
+      "median_name_ratio": 1.0
+    },
+    {
+      "label": "all provided generated non-duplicate pairs",
+      "pairs": 98142,
+      "missing_endpoints": 0,
+      "train_identity_pairs": 63559,
+      "test_identity_pairs": 3718,
+      "cross_split_or_mixed_identity_pairs": 30865,
+      "exact_normalized_name_fraction": 0.0,
+      "name_ratio_ge_0_90_fraction": 0.0,
+      "token_sort_ge_0_90_fraction": 0.0,
+      "same_region_fraction": 0.999643373886817,
+      "shared_token_fraction": 0.02608465284995211,
+      "median_name_ratio": 0.3414634146341463
+    },
+    {
+      "label": "held-out provided duplicate pairs",
+      "pairs": 1954,
+      "missing_endpoints": 0,
+      "train_identity_pairs": 0,
+      "test_identity_pairs": 1954,
+      "cross_split_or_mixed_identity_pairs": 0,
+      "exact_normalized_name_fraction": 0.7123848515864892,
+      "name_ratio_ge_0_90_fraction": 0.7727737973387923,
+      "token_sort_ge_0_90_fraction": 0.7650972364380757,
+      "same_region_fraction": 0.9994882292732856,
+      "shared_token_fraction": 1.0,
+      "median_name_ratio": 1.0
+    },
+    {
+      "label": "held-out provided generated non-duplicate pairs",
+      "pairs": 3718,
+      "missing_endpoints": 0,
+      "train_identity_pairs": 0,
+      "test_identity_pairs": 3718,
+      "cross_split_or_mixed_identity_pairs": 0,
+      "exact_normalized_name_fraction": 0.0,
+      "name_ratio_ge_0_90_fraction": 0.0,
+      "token_sort_ge_0_90_fraction": 0.0,
+      "same_region_fraction": 0.9981172673480366,
+      "shared_token_fraction": 0.027703066164604627,
+      "median_name_ratio": 0.339622641509434
+    }
+  ],
+  "interpretation": "This audit checks whether supplied negative pairs are much easier than positives. It uses names only for aggregate similarity summaries and does not export row-level data."
+}
